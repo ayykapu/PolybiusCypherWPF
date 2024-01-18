@@ -106,8 +106,9 @@ namespace PolybiusCypherWPF
         }
         private static bool IsDecValidFormat(string input)
         {
-            string pattern = @"^([1-9][1-9] )*[1-9][1-9]$";
+            string pattern = @"^([1-9][0-9] )*[1-9][0-9]$";
             return Regex.IsMatch(input, pattern);
+           // return true;
         }
         public void EncryptionButton_Click(object sender, EventArgs e)
         {
