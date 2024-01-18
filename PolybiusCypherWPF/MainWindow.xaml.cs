@@ -102,6 +102,7 @@ namespace PolybiusCypherWPF
         private static bool IsEncValidFormat(string input)
         {
             string pattern = @"(?i)^[aąbcćdeęfghijklłmnńoópqrsśtuvwxyzżź]+(\s[aąbcćdeęfghijklłmnńoópqrsśtuvwxyzżź]+)*$";
+            MessageBox.Show(Regex.IsMatch(input, pattern).ToString());
             return Regex.IsMatch(input, pattern);
         }
         private static bool IsDecValidFormat(string input)
